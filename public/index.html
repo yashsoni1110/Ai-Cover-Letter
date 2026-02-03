@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Cover Letter Generator</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-glob"></div>
+    <div class="background-glob glob-2"></div>
+
+    <div class="container glass-card">
+      <header>
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <h1>AI Cover Letter</h1>
+        <p>Generate a professional cover letter in seconds.</p>
+      </header>
+
+      <form id="coverLetterForm">
+        <div class="input-group">
+          <label for="name"><i class="fa-regular fa-user"></i> Full Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="e.g. Alex Johnson"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label for="jobRole"
+              ><i class="fa-solid fa-briefcase"></i> Job Role</label
+            >
+            <input
+              type="text"
+              id="jobRole"
+              placeholder="e.g. Frontend Developer"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="company"
+              ><i class="fa-regular fa-building"></i> Company</label
+            >
+            <input
+              type="text"
+              id="company"
+              placeholder="e.g. Google"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label for="mobile"
+              ><i class="fa-solid fa-phone"></i> Mobile Number</label
+            >
+            <input
+              type="tel"
+              id="mobile"
+              placeholder="e.g. +1 555 0199 888"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="hiringManager"
+              ><i class="fa-solid fa-user-tie"></i> Hiring Manager
+              (Optional)</label
+            >
+            <input
+              type="text"
+              id="hiringManager"
+              placeholder="e.g. Jane Smith"
+            />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="skills"
+            ><i class="fa-solid fa-wand-magic-sparkles"></i> Key Skills</label
+          >
+          <input
+            type="text"
+            id="skills"
+            placeholder="e.g. React, Node.js, Communication"
+            required
+          />
+        </div>
+
+        <button type="submit" id="generateBtn">
+          <span>Generate <i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+      </form>
+
+      <div id="loading" class="loading-state hidden">
+        <div class="spinner"></div>
+        <p>Crafting your letter...</p>
+      </div>
+
+      <div id="output" class="output-section hidden">
+        <div class="section-header">
+          <h2>Your Cover Letter</h2>
+          <button id="copyBtn" class="secondary-btn" title="Copy to Clipboard">
+            <i class="fa-regular fa-copy"></i> Copy
+          </button>
+        </div>
+        <textarea id="letterText" readonly></textarea>
+      </div>
+    </div>
+
+    <div id="toast" class="toast hidden">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
