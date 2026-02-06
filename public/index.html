@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Cover Letter Generator</title>
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <!-- Font Awesome -->
@@ -17,16 +19,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="background-glob"></div>
-    <div class="background-glob glob-2"></div>
+    <div class="background-wrapper">
+      <div class="background-glob glob-1"></div>
+      <div class="background-glob glob-2"></div>
+      <div class="background-glob glob-3"></div>
+    </div>
 
     <div class="container glass-card">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </button>
+
       <header>
         <div class="icon-wrapper">
-          <i class="fa-solid fa-robot"></i>
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
         </div>
         <h1>AI Cover Letter</h1>
-        <p>Generate a professional cover letter in seconds.</p>
+        <p>Craft your perfect professional story in seconds.</p>
       </header>
 
       <form id="coverLetterForm">

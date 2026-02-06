@@ -1,5 +1,25 @@
 
 
+
+// Theme Handling
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+const html = document.documentElement;
+
+// Check Local Storage
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+    html.setAttribute('data-theme', currentTheme);
+}
+
+themeToggle.addEventListener('click', () => {
+    const isLight = html.getAttribute('data-theme') === 'light';
+    const newTheme = isLight ? 'dark' : 'light';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+});
+
 document.getElementById('coverLetterForm').addEventListener('submit', async function(e) {
     e.preventDefault();
 
